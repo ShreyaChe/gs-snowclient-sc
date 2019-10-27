@@ -9,20 +9,28 @@ import { AuthGuardService } from './shared/guards/auth-guard.service' ;
 import { AuthService } from './shared/guards/auth.service' ;
 import { AppRoutingModule } from './app-routing.module';
 import { LoginRedirect } from './shared/guards/login-redirect.guard';
-import { HomeComponent } from './home/home.component' ;
-
+import { HomeComponent } from './home/home.component';
+import { CrtincdntComponent } from './crtincdnt/crtincdnt.component';
+import { OpenincdntsComponent } from './openincdnts/openincdnts.component' ;
+import { TableModule} from 'primeng/table';
+import { DropdownModule,InputTextModule} from 'primeng/primeng' ;
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CrtincdntComponent,
+    OpenincdntsComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,  
     AppRoutingModule,
+    TableModule,
+    DropdownModule,
+    InputTextModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: function  tokenGetter() { 

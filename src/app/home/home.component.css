@@ -1,0 +1,23 @@
+
+  .head {
+    background-color:  #11868c ;
+    color: white;
+    text-align: center;
+    width:20% ;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  button {
+    width: 15%;
+    height: 30pt;
+    background-color:#7d8383;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
