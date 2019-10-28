@@ -1,0 +1,80 @@
+form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 35%;
+    margin-right: 25%;
+    margin-top: 1%;
+    width: 25%;
+    font-size: 10pt;
+  }
+  
+  ::placeholder{
+    font-size: 8pt;
+  }
+  p{
+    font-size: 9pt;
+    color:#808080;
+  }
+  
+  
+  input[type=text], select {
+    height: 25pt;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 8pt;
+  }
+  input[type=email], select {
+    width: 100%;
+    height: 25pt;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 10pt;
+  }
+  input[type=password], select {
+    width: 100%;
+    height: 25pt;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    height: 30pt;
+    background-color:#070842;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=button] {
+    width: 100%;
+    height: 30pt;
+    background-color:#070842;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=button]:hover {
+    background-color: #6BC4AC;
+  }

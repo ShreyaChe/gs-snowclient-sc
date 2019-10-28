@@ -13,14 +13,16 @@ import { HomeComponent } from './home/home.component';
 import { CrtincdntComponent } from './crtincdnt/crtincdnt.component';
 import { OpenincdntsComponent } from './openincdnts/openincdnts.component' ;
 import { TableModule} from 'primeng/table';
-import { DropdownModule,InputTextModule} from 'primeng/primeng' ;
+import { DropdownModule,InputTextModule} from 'primeng/primeng';
+import { RegisterComponent } from './register/register.component' ;
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
     CrtincdntComponent,
-    OpenincdntsComponent
+    OpenincdntsComponent,
+    RegisterComponent
   ],
   imports: [
     HttpClientModule,

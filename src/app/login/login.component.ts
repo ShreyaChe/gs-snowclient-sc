@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder,FormGroup,Validators}  from '@angular/forms';
-import { SnowserviceService} from '../snowservice.service' ;
+import { NodejService} from '../nodej.service' ;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,7 +9,7 @@ import { SnowserviceService} from '../snowservice.service' ;
 })
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
-  constructor(private router:Router,private fb:FormBuilder, private snowservice :SnowserviceService) { }
+  constructor(private router:Router,private fb:FormBuilder, private nodejservice:NodejService) { }
 
   ngOnInit() {
     this.loginForm  = this.fb.group({
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   oauth2Login()
   {
-  this.snowservice.oauthLogin(this.loginForm.value).subscribe(
+  this.nodejservice.loginUser(this.loginForm.value).subscribe(
 
     response=>
     {

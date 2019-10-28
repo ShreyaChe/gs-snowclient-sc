@@ -5,6 +5,7 @@ import { HomeComponent} from './home/home.component'
 import { LoginRedirect} from './shared/guards/login-redirect.guard';
 import { CrtincdntComponent} from './crtincdnt/crtincdnt.component';
 import { OpenincdntsComponent} from './openincdnts/openincdnts.component' ;
+import { RegisterComponent} from './register/register.component' ;
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes =[
@@ -15,6 +16,7 @@ const routes: Routes =[
   // {path:'home',component:HomeComponent,canActivate: [LoginRedirect]},
   {path:'home',component:HomeComponent},
   {path:'crtincdnt',component:CrtincdntComponent},
+  {path:'register', component:RegisterComponent},
   { path:'opnincdnts',component:OpenincdntsComponent},
    { path: '', redirectTo: 'login', pathMatch: 'full' }
   
