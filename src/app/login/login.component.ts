@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder,FormGroup,Validators}  from '@angular/forms';
 import { NodejService} from '../nodej.service' ;
+import { SnowserviceService} from '../snowservice.service' ;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,8 +10,8 @@ import { NodejService} from '../nodej.service' ;
 })
 export class LoginComponent implements OnInit {
   loginForm:FormGroup;
-  constructor(private router:Router,private fb:FormBuilder, private nodejservice:NodejService) { }
-
+  constructor(private router:Router,private fb:FormBuilder, private nodejservice:NodejService,private snowservice:SnowserviceService) { }
+  msgs;
   ngOnInit() {
     this.loginForm  = this.fb.group({
 
@@ -22,32 +23,22 @@ export class LoginComponent implements OnInit {
 
   oauth2Login()
   {
-  this.nodejservice.loginUser(this.loginForm.value).subscribe(
-
+     this.nodejservice.loginUser(this.loginForm.value).subscribe(
+   // this.snowservice.oauthLogin(this.loginForm.value).subscribe(
     response=>
     {
-      if (response['access_token'])
+      if (response.response )
+        
       {
-        this.router.navigate(['/home']);
-
-        //login successful if there's a Spring Session token in the response
-        if (response && response['access_token'])
-        {
-          //store user details and Spring Session OAuth token refreshes
-          localStorage.setItem('access_token', response['access_token']);
-          localStorage.setItem('refresh_token', response['access_token']);
-          localStorage.setItem('token_type', response['token_type']);
-          localStorage.setItem('scope', response['scope']);
+          this.router.navigate(['/home']);
           localStorage.setItem('isLoggedIn', 'true');
 
          // this.getUserInfoUsingOAuth2Token(response['access_token']);
         }
-      }
       else
-      {
-        this.router.navigate(['/login']);
+        { this.msgs = 'Invalid Credentials' }
       }
-    },
+      ,
     error =>
     {
       console.log(error);

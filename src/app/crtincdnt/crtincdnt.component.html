@@ -1,3 +1,16 @@
-<p>
-  crtincdnt works!
-</p>
+<p class="incdnt">Create an incident</p>
+
+<div class="headline">
+    <h5>Caller</h5>
+    <div  title="Caller">
+        <select placeholder="Caller" (change)="changeCaller($event.target.value)">
+            <option *ngFor ="let cal of callers">{{cal}} </option>
+        </select>
+    </div>
+    
+    <h5>Description (100 Characters )</h5>
+        <input type="text" [(ngModel)]="company.name"/> 
+    <button (click)="createIncdnt()">Submit</button><br>
+</div>
+
+ 

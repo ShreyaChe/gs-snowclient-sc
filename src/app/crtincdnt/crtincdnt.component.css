@@ -1,0 +1,40 @@
+.head{
+    width:711px;
+    height:100px;
+    margin-left: 270px;
+    margin-top: 70px;
+}
+
+.headline{
+    height:400px;
+    width:711px;
+    border: 1px solid #ccc;
+    margin-top: 40px;
+    margin-left: 270px;
+    box-shadow:2px 2px 2px 3px #ccc;
+    font-family: 'proxima_nova_rgregular';
+}
+
+.incdnt{
+    height:50px;
+    width:690px;
+    border: 1px solid #ccc;
+    margin-top: 40px;
+    padding: 20px 14px;
+    align-self:center;
+    margin: 8px 0;
+    background-color:#11868c;
+    margin-left: 270px;
+    font-family: 'proxima_nova_rgregular';
+}
+button {
+    width: 10%;
+    height: 20pt;
+    background-color:#11868c;
+    color: white;
+    align-self:center;
+    margin: 20px 300px 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
