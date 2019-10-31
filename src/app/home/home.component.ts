@@ -15,6 +15,6 @@ export class HomeComponent implements OnInit {
   createincident()
   { this.router.navigate(['/crtincdnt']);}
 
-  openincidents() 
+  showincdnts() 
   {this.router.navigate(['/opnincdnts']);}
 }

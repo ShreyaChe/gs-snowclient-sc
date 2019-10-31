@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit {
       {
           this.router.navigate(['/home']);
           localStorage.setItem('isLoggedIn', 'true');
-
+          localStorage.setItem('user', this.loginForm.value.email);
+          localStorage.setItem('pwd', this.loginForm.value.password);
          // this.getUserInfoUsingOAuth2Token(response['access_token']);
         }
       else

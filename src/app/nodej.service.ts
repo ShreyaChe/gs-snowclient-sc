@@ -33,4 +33,9 @@ export class NodejService {
     return this.httpClient.post(this.baseurl+'/api/v1/user',body,
     {headers:this.httpHeaders});
   }
+  getIncdnts(user): Observable<any> {
+    const body = {email: user.email, password: user.password}
+    return this.httpClient.post(this.baseurl+'/api/v1/incidents/getincdnts',body,
+    {headers:this.httpHeaders});
+  }
 }
