@@ -6,7 +6,7 @@
 }
 
 .headline{
-    height:600px;
+    height:400px;
     width:711px;
     border: 1px solid #ccc;
     margin-top: 40px;
@@ -44,3 +44,5 @@ button {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  

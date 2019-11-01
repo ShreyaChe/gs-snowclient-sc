@@ -14,7 +14,9 @@ import { CrtincdntComponent } from './crtincdnt/crtincdnt.component';
 import { OpenincdntsComponent } from './openincdnts/openincdnts.component' ;
 import { TableModule} from 'primeng/table';
 import { DropdownModule,InputTextModule} from 'primeng/primeng';
-import { RegisterComponent } from './register/register.component' ;
+import { RegisterComponent } from './register/register.component';
+import { ViewincdntdtlComponent } from './viewincdntdtl/viewincdntdtl.component';
+import { UpdtincdntComponent } from './updtincdnt/updtincdnt.component' ;
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { RegisterComponent } from './register/register.component' ;
     HomeComponent,
     CrtincdntComponent,
     OpenincdntsComponent,
-    RegisterComponent
+    RegisterComponent,
+    ViewincdntdtlComponent,
+    UpdtincdntComponent
   ],
   imports: [
     HttpClientModule,

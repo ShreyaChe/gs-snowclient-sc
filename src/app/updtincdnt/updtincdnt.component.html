@@ -1,4 +1,4 @@
-<p class="incdnt">Create an incident</p>
+<p class="incdnt">Incident No - {{incident.no}}</p>
 <div class="headline">
 <p>Contact type</p>
 <select placeholder="None" (change)="changeCntct($event.target.value)">
@@ -23,9 +23,7 @@
 
   
     <p>Short Description</p>
-        <input type="text" class="desc" [(ngModel)]="desc"/> <br>
+        <input type="text" class="desc" [(ngModel)]="desc"/> 
         
-    <button (click)="createIncdnt()">Submit</button>
-
-    <button (click)="back()">Back</button><br>
+    <button (click)="updtIncdnt()">Submit</button><br>
 </div>  

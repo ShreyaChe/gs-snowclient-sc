@@ -29,13 +29,31 @@ export class NodejService {
     {headers:this.httpHeaders});
   }
   newIncdnt(incdnt): Observable<any> {
-    const body = {caller: incdnt.caller,state:incdnt.state,desc: incdnt.desc}
-    return this.httpClient.post(this.baseurl+'/api/v1/user',body,
+     
+    const body = {email: incdnt.email, password: incdnt.password,cntcttype:incdnt.cntcttype,state: incdnt.state,ctgry:incdnt.ctgry,impct:incdnt.impct,desc: incdnt.desc}
+    return this.httpClient.post(this.baseurl+'/api/v1/incidents/putincdnt',body,
     {headers:this.httpHeaders});
   }
   getIncdnts(user): Observable<any> {
     const body = {email: user.email, password: user.password}
     return this.httpClient.post(this.baseurl+'/api/v1/incidents/getincdnts',body,
+    {headers:this.httpHeaders});
+  }
+  viewIncdnt(incdnt): Observable<any> {
+    const body = {email: incdnt.email, password: incdnt.password,incdntno:incdnt.no}
+    return this.httpClient.post(this.baseurl+'/api/v1/incidents/vwincdntdtl',body,
+    {headers:this.httpHeaders});
+  }
+  updIncdnt(incdnt): Observable<any> {
+     
+    const body = {email: incdnt.email, password: incdnt.password,cntcttype:incdnt.cntcttype,state: incdnt.state,ctgry:incdnt.ctgry,impct:incdnt.impct,desc: incdnt.desc,sysid:incdnt.sysid}
+    return this.httpClient.post(this.baseurl+'/api/v1/incidents/updincdnt',body,
+    {headers:this.httpHeaders});
+  }
+  dltIncdnt(incdnt): Observable<any> {
+     
+    const body = {email: incdnt.email, password: incdnt.password,sysid:incdnt.sysid}
+    return this.httpClient.post(this.baseurl+'/api/v1/incidents/dltincdnt',body,
     {headers:this.httpHeaders});
   }
 }

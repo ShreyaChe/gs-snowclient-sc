@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SnowserviceService} from '../snowservice.service' ;
+import { Router } from '@angular/router';
 import { NodejService} from '../nodej.service' ;
 import { HttpClient , HttpHeaders } from '@angular/common/http';
 @Component({
@@ -13,14 +13,14 @@ export class OpenincdntsComponent implements OnInit {
 
   public incidents=[];
   incident;
-  incdnt=[]
+  incdnt;
   user;
-  constructor(private nodejservice:NodejService,private http: HttpClient) { }
+  constructor(private nodejservice:NodejService,private http: HttpClient,private router:Router) { }
 
   ngOnInit() {
     
     this.incident = {number: '', priority: '',  state: '' ,  impact:  '',   category:  '',   subcategory:  '' ,  severity:  '' ,  urgency:  '' ,  incident_state:  '' ,  work_notes:  '' ,  comments:  '' ,  short_description:  '' ,   reassignment_count:  '' ,  opened_at:  '' , resolved_at: '',  closed_at: '' , caller_id: '' , opened_by: '' , closed_by: '' , resolved_by: '' , sys_updated_by:'' , sys_created_on: '', sys_updated_on: '' , sys_created_by:''  }
-    this.incdnt = [this.incident]
+     
     this.user = {email:'',password:''}
     this.user.email= localStorage.getItem('user');
     this.user.password=localStorage.getItem('pwd');
@@ -58,7 +58,8 @@ export class OpenincdntsComponent implements OnInit {
               for (let key  in this.incident) {
                 this.incident[key] = element[key]
               }
-              
+              this.incident.assigned_to = element.assigned_to.value
+              this.incident.assignment_group = element.assignment_group.value
               console.log(this.incidents) 
               this.incidents.push(this.incident)
               this.incident = {number: '', priority: '',  state: '' ,  impact:  '',   category:  '',   subcategory:  '' ,  severity:  '' ,  urgency:  '' ,  incident_state:  '' ,  work_notes:  '' ,  comments:  '' ,  short_description:  '' ,   reassignment_count:  '' ,  opened_at:  '' , resolved_at: '',  closed_at: '' , caller_id: '' , opened_by: '' , closed_by: '' , resolved_by: '' , sys_updated_by:'' , sys_created_on: '', sys_updated_on: '' , sys_created_by:''  }
@@ -83,4 +84,10 @@ export class OpenincdntsComponent implements OnInit {
           
        }    
          );}
+  viewincdnt(inc)
+  {
+    this.incdnt=inc
+    this.router.navigate(['/viewincdntdtl',inc]);
+  }
+  
 }
