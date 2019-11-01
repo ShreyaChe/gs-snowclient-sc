@@ -63,14 +63,14 @@ export class OpenincdntsComponent implements OnInit {
               console.log(this.incidents) 
               this.incidents.push(this.incident)
               this.incident = {number: '', priority: '',  state: '' ,  impact:  '',   category:  '',   subcategory:  '' ,  severity:  '' ,  urgency:  '' ,  incident_state:  '' ,  work_notes:  '' ,  comments:  '' ,  short_description:  '' ,   reassignment_count:  '' ,  opened_at:  '' , resolved_at: '',  closed_at: '' , caller_id: '' , opened_by: '' , closed_by: '' , resolved_by: '' , sys_updated_by:'' , sys_created_on: '', sys_updated_on: '' , sys_created_by:''  }
-              console.log(this.incidents,'print')
+             // console.log(this.incidents,'print')
               //this.incidents.concat(this.incident)
                 //    console.log (element[key])
                  //  console.log (key) }
             //  console.log(element )
-               for (let key  in element) {
+           //    for (let key  in element) {
                 //   console.log (element[key])
-                console.log (key) }
+           //     console.log (key) }
             });
            
            }

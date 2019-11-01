@@ -9,6 +9,7 @@ import { NodejService} from '../nodej.service' ;
 })
 export class ViewincdntdtlComponent implements OnInit {
   incdnt; 
+  
   constructor(private route: ActivatedRoute,private nodejservice:NodejService,private router:Router) { }
   incident;
   ngOnInit() {

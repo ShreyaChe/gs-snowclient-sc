@@ -6,7 +6,7 @@ Enter incident number to view incident detail
 <button class="upd" (click)="viewincdnt(incdnt)">View Details</button><br>
 <div> 
 
-  <p-table #dt2 [columns]="cols" [value]="incidents" [paginator]="true" [rows]="10" dataKey="incident_id" [resizableColumns]="true" [reorderableColumns]="true"
+  <p-table #dt2 [columns]="cols" [value]="incidents" [paginator]="true" [rows]="100" dataKey="incident_id" [resizableColumns]="true" [reorderableColumns]="true"
   
            selectionMode="single" [(selection)]="incident" stateStorage="local" stateKey="statedemo-local">
   
